@@ -1,0 +1,18 @@
+set1 = new Set()
+
+while e = seq1.next()
+  set1.add(e)
+
+while e = seq2.next()
+  // set is empty => no more element in seq1
+  // but there are still some elements in seq2
+  if set1.size() == 0
+    return "NO"  
+
+  set1.remove(e)
+
+if set1.size() > 0
+  // set is not empty => some elements exist in seq1 but not seq2
+  return "NO"
+
+return "YES"

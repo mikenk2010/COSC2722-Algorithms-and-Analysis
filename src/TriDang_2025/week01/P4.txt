@@ -1,0 +1,33 @@
+Given matrix A[R][C]  // R = number of rows, C = number of columns
+And query (top, left, bottom right)
+Return the sum of all numbers in the rectangle specified by (top, left, bottom right)
+
+// Algorithm 1
+sum = 0
+// loop through (top, left) -> (bottom, right)
+for r = top to bottom
+  for c = left to right
+    sum += A[r][c]
+
+========================
+
+Algorithm 2
+// use the idea of prefix sum
+// first, calculate all the prefix sums
+
+prefixSum[0][0] = A[0][0]
+
+// first row
+for c = 1 to C - 1
+  prefixSum[0][c] = prefixSum[0][c-1] + A[0][c]
+
+// first column
+for r = 1 to R - 1
+  prefixSum[r][0] = prefixSum[r-1][0] + A[r][0]
+
+for r = 0 to R - 1
+  for c = 0 to C - 1
+    prefixSum[r][c] = prefixSum[r-1][c] + prefixSum[r][c-1] - prefixSum[r-1][c-1] + A[r][c]
+    
+// to answer a query (top, left, bottom, right)
+return prefixSum[bottom][right] - prefixSum[top-1][right] - prefixSum[bottom][left-1] + prefixSum[top-1][left-1]
