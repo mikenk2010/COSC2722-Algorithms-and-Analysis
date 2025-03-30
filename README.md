@@ -33,6 +33,13 @@ This repository contains Java-based implementations and problem solutions struct
 
 ---
 
+## Mock TEST
+
+### MidTerm 1
+[Readme file for midterm](src/MockTest_Midterm_1/README.md)
+
+---
+
 ## 🔧 How to Run
 
 Each problem file contains a `main()` method and test data.
