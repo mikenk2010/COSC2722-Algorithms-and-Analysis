@@ -1,0 +1,3 @@
+[submodule "src/algorithms-2025a"]
+	path = src/algorithms-2025a
+	url = git@github.com:TriDang/algorithms-2025a.git
