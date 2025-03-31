@@ -210,7 +210,3 @@ int binaryInsertRank(int[] scores, int X) {
 ```
 **Time Complexity:** O(log N)
 
----
-
-Let me know if you'd like another mock focused on recursion, graphs, or dynamic programming next!
-

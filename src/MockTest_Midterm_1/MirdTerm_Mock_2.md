@@ -206,7 +206,3 @@ int binaryPosition(int[] A, int X) {
 ```
 **Time Complexity:** O(log N)
 
----
-
-Let me know if you'd like additional problems like heaps, graphs, or recursion-based challenges!
-
